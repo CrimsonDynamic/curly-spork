@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://buf3pfwt8rxie"]
+[gd_scene load_steps=11 format=4 uid="uid://buf3pfwt8rxie"]
 
 [ext_resource type="Texture2D" uid="uid://chrplpoyjgvml" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at.png" id="1_t2iex"]
 [ext_resource type="Texture2D" uid="uid://bv1j2nk8my776" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at_90.png" id="2_jabqq"]
 [ext_resource type="Texture2D" uid="uid://b7t1lhrybin8x" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at_180.png" id="3_d5i7o"]
 [ext_resource type="Texture2D" uid="uid://cchg0ok1ex30u" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at_270.png" id="4_ko260"]
+[ext_resource type="PackedScene" uid="uid://mvqoq7rxb0xa" path="res://player.tscn" id="5_ospnp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n1rfc"]
 texture = ExtResource("1_t2iex")
@@ -1160,6 +1161,7 @@ texture_region_size = Vector2i(32, 32)
 7:7/0 = 0
 8:7/0 = 0
 9:7/0 = 0
+9:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 10:7/0 = 0
 11:7/0 = 0
 12:7/0 = 0
@@ -1176,6 +1178,7 @@ texture_region_size = Vector2i(32, 32)
 7:8/0 = 0
 8:8/0 = 0
 9:8/0 = 0
+9:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 10:8/0 = 0
 11:8/0 = 0
 12:8/0 = 0
@@ -1450,7 +1453,9 @@ texture_region_size = Vector2i(32, 32)
 5:9/0 = 0
 6:9/0 = 0
 7:9/0 = 0
+7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 8:9/0 = 0
+8:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 9:9/0 = 0
 10:9/0 = 0
 11:9/0 = 0
@@ -1677,6 +1682,7 @@ texture_region_size = Vector2i(32, 32)
 4:7/0 = 0
 5:7/0 = 0
 6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:7/0 = 0
 8:7/0 = 0
 9:7/0 = 0
@@ -1693,6 +1699,7 @@ texture_region_size = Vector2i(32, 32)
 4:8/0 = 0
 5:8/0 = 0
 6:8/0 = 0
+6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:8/0 = 0
 8:8/0 = 0
 9:8/0 = 0
@@ -1830,3 +1837,7 @@ tile_map_data = PackedByteArray("AAADAAAAAAAHAAYAAAAEAAAAAAAIAAYAAAAFAAAAAAAHAAY
 tile_set = SubResource("TileSet_rc5sa")
 
 [node name="Background" type="TileMapLayer" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("5_ospnp")]
+position = Vector2(359, 169)
+SPEED = 250.0
