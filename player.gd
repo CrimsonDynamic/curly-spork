@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export_group("Character Movement")
-@export var Bullet: PackedScene
+@export var Bullet = preload("res://bullet.tscn")
 @export var SPEED = 300.0
 
 @export var DASH_SPEED = 600.0
