@@ -7,7 +7,7 @@ extends CharacterBody2D
 
 @export var DASH_SPEED = 600.0
 var dashing = false
-var direction
+var direction: Vector2
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -45,4 +45,4 @@ func _input(event):
 func shoot():
 	var b = Bullet.instantiate()
 	owner.add_child(b)
-	b.transform = direction
+	b.transform = $Muzzel.global_transform
