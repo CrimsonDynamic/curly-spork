@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=4 uid="uid://buf3pfwt8rxie"]
+[gd_scene load_steps=16 format=4 uid="uid://buf3pfwt8rxie"]
 
 [ext_resource type="Texture2D" uid="uid://chrplpoyjgvml" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at.png" id="1_t2iex"]
 [ext_resource type="Texture2D" uid="uid://bv1j2nk8my776" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at_90.png" id="2_jabqq"]
 [ext_resource type="Texture2D" uid="uid://b7t1lhrybin8x" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at_180.png" id="3_d5i7o"]
 [ext_resource type="Texture2D" uid="uid://cchg0ok1ex30u" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at_270.png" id="4_ko260"]
+[ext_resource type="PackedScene" uid="uid://mvqoq7rxb0xa" path="res://player.tscn" id="5_ospnp"]
 [ext_resource type="Texture2D" uid="uid://civf5kopicb4a" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="5_wrecp"]
 [ext_resource type="Texture2D" uid="uid://dti8d0j2lvqwn" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="6_8pct4"]
 
@@ -2318,3 +2319,5 @@ position = Vector2(-672, -221)
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAAZAAcABAADAAAAAAAZAAgABAADAAEAAAAjAAgABAAGAA0AAAAjAAkABAAGAA4AAAAkAAgABAAHAA0AAAAkAAkABAAHAA4AAAAlAAgABQAIAA0AAAAlAAkABQAIAA4AAAAmAAgABQAJAA0AAAAmAAkABQAJAA4AAAAnAAgABAAKAA0AAAAnAAkABAAKAA4AAAAoAAgABAALAA0AAAAoAAkABAALAA4AAAAoAAoABAALAA8AAAApAAgABAAMAA0AAAApAAkABAAMAA4AAAApAAoABAAMAA8AAAAjAAcABAAGAAwAAAAkAAcABAAHAAwAAAAlAAcABAAIAAwAAAAmAAcABAAJAAwAAAAnAAcABAAKAAwAAAAoAAcABAALAAwAAAApAAcABAAMAAwAAAAhAAcABAAEAAwAAAAhAAgABAAEAA0AAAAhAAkABAAEAA4AAAAiAAcABAAFAAwAAAAiAAgABAAFAA0AAAAiAAkABAAFAA4AAAA=")
 tile_set = SubResource("TileSet_5yi8i")
+
+[node name="Player" parent="." instance=ExtResource("5_ospnp")]
