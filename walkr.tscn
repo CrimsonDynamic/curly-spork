@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://csekx1wcjip55"]
+
+[ext_resource type="Texture2D" uid="uid://dmuh4npcf0j5s" path="res://assets/Basic Asset Pack/Basic Undead Animations/Sand Ghoul/SandGhoul.png" id="1_t3qap"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eatap"]
+atlas = ExtResource("1_t3qap")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5onkk"]
+atlas = ExtResource("1_t3qap")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sg242"]
+atlas = ExtResource("1_t3qap")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vu14"]
+atlas = ExtResource("1_t3qap")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ors8t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eatap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5onkk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sg242")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vu14")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ors8t")
+autoplay = "default"
