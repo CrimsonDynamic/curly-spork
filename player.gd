@@ -1,11 +1,13 @@
 extends CharacterBody2D
 
 @export_group("Character Movement")
+@export var Bullet : PackedScene
+
 @export var SPEED = 300.0
 
 @export var DASH_SPEED = 600.0
 var dashing = false
-
+var direction
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -36,3 +38,11 @@ func _input(event):
 		print_debug("dashed")
 		dashing = true
 		$Timer.start()
+		
+	if event.is_action_pressed("shoot"):
+		shoot()
+	
+func shoot():
+	var b = Bullet.instantiate()
+	owner.add_child(b)
+	b.transform = direction
