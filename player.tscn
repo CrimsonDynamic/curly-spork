@@ -35,5 +35,12 @@ script = ExtResource("1_ikj4o")
 shape = SubResource("CapsuleShape2D_pi5ye")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ayqm8")
 frame_progress = 0.531461
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
