@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://bv5v4s55unkbd"]
+
+[ext_resource type="Script" path="res://skelet.gd" id="1_avxku"]
+[ext_resource type="Texture2D" uid="uid://rdtu8ln38257" path="res://assets/Basic Asset Pack/Basic Undead Animations/Bound Cadaver/BoundCadaver.png" id="1_xpnih"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d02pu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sta84"]
+atlas = ExtResource("1_xpnih")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mi755"]
+atlas = ExtResource("1_xpnih")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmkqo"]
+atlas = ExtResource("1_xpnih")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcogg"]
+atlas = ExtResource("1_xpnih")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0g3gh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sta84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mi755")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmkqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcogg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["mobs"]]
+script = ExtResource("1_avxku")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["mobs"]]
+shape = SubResource("CapsuleShape2D_d02pu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_0g3gh")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.794176
