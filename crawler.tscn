@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0m3kvs2w8236"]
+
+[ext_resource type="Script" path="res://crawler.gd" id="1_7rudt"]
+[ext_resource type="Texture2D" uid="uid://vf053603osrm" path="res://assets/Basic Asset Pack/Basic Undead Animations/Carcass Feeder/CarcassFeeder.png" id="1_wvm5g"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ht0gb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfuqw"]
+atlas = ExtResource("1_wvm5g")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_baeug"]
+atlas = ExtResource("1_wvm5g")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_heamh"]
+atlas = ExtResource("1_wvm5g")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4e0g"]
+atlas = ExtResource("1_wvm5g")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5m6tw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfuqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_baeug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_heamh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4e0g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["mobs"]]
+script = ExtResource("1_7rudt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["mobs"]]
+shape = SubResource("CapsuleShape2D_ht0gb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_5m6tw")
+autoplay = "default"

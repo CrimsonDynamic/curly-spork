@@ -46,3 +46,8 @@ func shoot():
 	var b = Bullet.instantiate()
 	owner.add_child(b)
 	b.transform = $Muzzle.global_transform
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("mobs"):
+		print_debug("Aua!")

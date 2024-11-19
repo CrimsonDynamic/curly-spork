@@ -19,6 +19,9 @@ config/icon="res://icon.svg"
 
 Player="Player Group"
 
+
+mobs=""
+
 [input]
 
 left={
