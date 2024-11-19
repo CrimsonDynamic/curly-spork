@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://buf3pfwt8rxie"]
+[gd_scene load_steps=17 format=4 uid="uid://buf3pfwt8rxie"]
 
 [ext_resource type="Texture2D" uid="uid://chrplpoyjgvml" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at.png" id="1_t2iex"]
 [ext_resource type="Texture2D" uid="uid://bv1j2nk8my776" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at_90.png" id="2_jabqq"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://mvqoq7rxb0xa" path="res://player.tscn" id="5_ospnp"]
 [ext_resource type="Texture2D" uid="uid://civf5kopicb4a" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="5_wrecp"]
 [ext_resource type="Texture2D" uid="uid://dti8d0j2lvqwn" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="6_8pct4"]
+[ext_resource type="PackedScene" uid="uid://c5es8g2aqpwrh" path="res://bullet.tscn" id="8_qg7fk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n1rfc"]
 texture = ExtResource("1_t2iex")
@@ -2320,3 +2321,4 @@ scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_5yi8i")
 
 [node name="Player" parent="." instance=ExtResource("5_ospnp")]
+Bullet = ExtResource("8_qg7fk")

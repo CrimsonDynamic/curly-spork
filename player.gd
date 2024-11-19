@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
 @export_group("Character Movement")
-@export var Bullet : PackedScene
-
+@export var Bullet: PackedScene
 @export var SPEED = 300.0
 
 @export var DASH_SPEED = 600.0
 var dashing = false
 var direction: Vector2
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -45,4 +45,4 @@ func _input(event):
 func shoot():
 	var b = Bullet.instantiate()
 	owner.add_child(b)
-	b.transform = $Muzzel.global_transform
+	b.transform = $Muzzle.global_transform
