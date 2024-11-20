@@ -2452,4 +2452,6 @@ shape = SubResource("RectangleShape2D_5eklv")
 [node name="R1D3" type="Marker2D" parent="Room1/Room1Door3"]
 position = Vector2(0, 28)
 
+[node name="Room2" type="Area2D" parent="."]
+
 [connection signal="body_entered" from="SpawnRoom" to="SpawnRoom" method="_on_body_entered"]
