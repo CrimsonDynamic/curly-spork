@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://csekx1wcjip55"]
+[gd_scene load_steps=9 format=3 uid="uid://csekx1wcjip55"]
 
+[ext_resource type="Script" path="res://walkr.gd" id="1_qtbu0"]
 [ext_resource type="Texture2D" uid="uid://dmuh4npcf0j5s" path="res://assets/Basic Asset Pack/Basic Undead Animations/Sand Ghoul/SandGhoul.png" id="1_t3qap"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eatap"]
@@ -38,8 +39,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wntxo"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["mobs"]]
+scale = Vector2(2, 2)
+script = ExtResource("1_qtbu0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["mobs"]]
 sprite_frames = SubResource("SpriteFrames_ors8t")
 autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_wntxo")
