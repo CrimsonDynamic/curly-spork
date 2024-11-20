@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [global_group]
 
-Player="Player Group"
 mobs=""
+Player="Player Group"
 
 [input]
 
