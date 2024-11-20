@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=4 uid="uid://buf3pfwt8rxie"]
+[gd_scene load_steps=21 format=4 uid="uid://buf3pfwt8rxie"]
 
 [ext_resource type="Texture2D" uid="uid://chrplpoyjgvml" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at.png" id="1_t2iex"]
+[ext_resource type="PackedScene" uid="uid://bv5v4s55unkbd" path="res://skelet.tscn" id="1_x53hl"]
 [ext_resource type="Texture2D" uid="uid://bv1j2nk8my776" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at_90.png" id="2_jabqq"]
 [ext_resource type="Texture2D" uid="uid://b7t1lhrybin8x" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at_180.png" id="3_d5i7o"]
 [ext_resource type="Texture2D" uid="uid://cchg0ok1ex30u" path="res://assets/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at_270.png" id="4_ko260"]
@@ -8,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://mvqoq7rxb0xa" path="res://player.tscn" id="5_ospnp"]
 [ext_resource type="Texture2D" uid="uid://civf5kopicb4a" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="5_wrecp"]
 [ext_resource type="Texture2D" uid="uid://dti8d0j2lvqwn" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="6_8pct4"]
+[ext_resource type="PackedScene" uid="uid://d0m3kvs2w8236" path="res://crawler.tscn" id="9_bw8hk"]
+[ext_resource type="PackedScene" uid="uid://csekx1wcjip55" path="res://walkr.tscn" id="10_nfx3w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n1rfc"]
 texture = ExtResource("1_t2iex")
@@ -2427,3 +2430,14 @@ scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_5yi8i")
 
 [node name="Player" parent="." instance=ExtResource("5_ospnp")]
+
+[node name="=== ENEMIES ===" type="Node" parent="."]
+
+[node name="CharacterBody2D" parent="=== ENEMIES ===" instance=ExtResource("9_bw8hk")]
+position = Vector2(100, -83)
+
+[node name="CharacterBody2D2" parent="=== ENEMIES ===" instance=ExtResource("10_nfx3w")]
+position = Vector2(-99, -68)
+
+[node name="CharacterBody2D3" parent="=== ENEMIES ===" instance=ExtResource("1_x53hl")]
+position = Vector2(104, 0)
