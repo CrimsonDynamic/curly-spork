@@ -2429,22 +2429,15 @@ position = Vector2(-672, -221)
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_5yi8i")
 
-[node name="Room1Door2" type="CollisionShape2D" parent="Room1"]
-position = Vector2(-269.5, 801)
-rotation = -1.56135
-shape = SubResource("RectangleShape2D_5eklv")
 [node name="Player" parent="." instance=ExtResource("5_ospnp")]
 
-[node name="=== ENEMIES ===" type="Node" parent="."]
+[node name="ENEMIES" type="Node" parent="."]
 
-[node name="CharacterBody2D" parent="=== ENEMIES ===" instance=ExtResource("9_bw8hk")]
+[node name="CharacterBody2D" parent="ENEMIES" instance=ExtResource("9_bw8hk")]
 position = Vector2(100, -83)
 
-[node name="CharacterBody2D2" parent="=== ENEMIES ===" instance=ExtResource("10_nfx3w")]
+[node name="CharacterBody2D2" parent="ENEMIES" instance=ExtResource("10_nfx3w")]
 position = Vector2(-99, -68)
 
-[node name="Room2" type="Area2D" parent="."]
-
-[connection signal="body_entered" from="SpawnRoom" to="SpawnRoom" method="_on_body_entered"]
-[node name="CharacterBody2D3" parent="=== ENEMIES ===" instance=ExtResource("1_x53hl")]
+[node name="CharacterBody2D3" parent="ENEMIES" instance=ExtResource("1_x53hl")]
 position = Vector2(104, 0)
