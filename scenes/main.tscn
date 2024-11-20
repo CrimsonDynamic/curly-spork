@@ -2439,7 +2439,6 @@ position = Vector2(0, 28)
 [node name="Room1Door2" type="CollisionShape2D" parent="Room1"]
 position = Vector2(-269.5, 801)
 rotation = -1.56135
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_5eklv")
 
 [node name="R1D2" type="Marker2D" parent="Room1/Room1Door2"]
