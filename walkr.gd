@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 @onready var player : CharacterBody2D
 
-@export var SPEED = 7.0
-@export var DAMAGE = 1.0
+@export var SPEED = 5.0
+@export var DAMAGE = 10.0
 @export var HP = 10.0
 
 func _ready():
